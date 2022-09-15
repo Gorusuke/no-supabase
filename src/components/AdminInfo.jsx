@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import AdminTable from "./AdminTable";
 import Filters from "./Filters";
 import { BUTTON_OUTLINE_BLUE } from "../constants/style.utils";
-import { getTournamentData } from "../supabase/supabaseFunctions";
+// import { getTournamentData } from "../supabase/supabaseFunctions";
 
 const AdminInfo = () => {
   const [allPlayerTournament, setAllPlayerTournament] = useState([]);
@@ -17,11 +17,11 @@ const AdminInfo = () => {
     }
   }, [user]);
 
-  useEffect(() => {
-    getTournamentData()
-      .then(({ tournament }) => setAllPlayerTournament(tournament))
-      .catch((error) => console.log(error));
-  }, [allPlayerTournament]);
+  // useEffect(() => {
+  //   getTournamentData()
+  //     .then(({ tournament }) => setAllPlayerTournament(tournament))
+  //     .catch((error) => console.log(error));
+  // }, [allPlayerTournament]);
 
   return (
     <div className="mt-4">
